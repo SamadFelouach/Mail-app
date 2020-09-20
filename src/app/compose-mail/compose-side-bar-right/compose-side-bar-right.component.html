@@ -1,0 +1,32 @@
+<aside class="page-aside">
+    <div class="aside-content">
+        <div class="aside-compose">
+            <a class="btn btn-lg btn-secondary btn-block" (click)="uploadImage1Click()" style="color: #fff;">
+                <i class="fas fa-cloud-upload-alt" aria-hidden="true" style="margin-right:10px"></i>
+                Upload contacts
+            </a>
+            <input 
+              type="file"
+              style="visibility:hidden;position:absolute" 
+              class="form-control-file" 
+              id="uploadimage1Clck" 
+              (change)="fileChanged1($event)" 
+              aria-describedby="fileHelpId">
+        </div>
+        <div class="aside-nav collapse">
+            <ul class="nav">
+                <li>
+                  <a (click)="downloadSampleCsv()">
+                    <span class="icon">
+                      <i class="fas fa-fw fa-inbox"></i>
+                    </span>
+                    Download .CSV sample
+                    <span class="icon">
+                      <i class="fas fa-file-download" style="float:right;margin-top:2px"></i>
+                    </span>
+                  </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</aside>
