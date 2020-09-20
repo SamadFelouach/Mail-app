@@ -10,7 +10,6 @@ import { ComposeFormComponent } from './compose-mail/compose-form/compose-form.c
 import { HttpClientModule } from '@angular/common/http';
 import { MailService } from './global-data/mail-service/mail-service.service';
 import { HomeManageComponent } from './home-manage/home-manage.component';
-import {NgModel} from '@angular/forms';
 import {FormsModule} from '@angular/forms';
 
 @NgModule({

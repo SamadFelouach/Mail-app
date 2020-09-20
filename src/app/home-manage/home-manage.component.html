@@ -81,175 +81,166 @@
               <div class="card-header p-2">
                 <ul class="nav nav-pills">
                   <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Activity</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab">Timeline</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Settings</a></li>
-                </ul>
-              </div>
+              <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab">Timeline</a></li>
+              <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Settings</a></li>
+              </ul>
+            </div>
 
-            <!-- La formulaire Client-->
-
+              <!-- La formulaire Client-->
               <div class="card-body">
-                <div class="card">
-                  <div class="card-header col-md">Contact Infos</div>
-                  <div class="card-body">
-                    <form #c="ngForm" (ngSubmit)="saveclient(c.value)">
-                      <div class="form-row">
-                        <div class="form-group col">
-                          <label >First Name </label>
-                          <input type="text" class="form-control" name="first_name" placeholder="First Name" [(ngModel)]="client.first_name">
-                        </div>
-                        <div class="form-group col">
-                          <label >Last Name</label>
-                          <input type="text" class="form-control" name="last_name" placeholder="Last name" [(ngModel)]="client.last_name">
-                        </div>
-                      <div class="form-group col">
-                        <label >Email</label>
-                        <input type="email" class="form-control" name="email"  placeholder="Email" [(ngModel)]="client.email_address">
-                      </div>
-                      </div>
+                       <form #c="ngForm" (ngSubmit)="saveclient(c.value)">
+                         <!--Contact Info Section---------------------------->
+                         <div class="card">
+                         <div class="card-header" > Contact Infos</div>
+                         <div class="card-body">
 
-                      <div class="form-row">
-                        <div class="form-group col-md-6">
-                          <label >Phone Number(optimal)</label>
-                          <input type="text" class="form-control" name="phone_number"  placeholder="Phone Number" [(ngModel)]="client.phone_number">
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label >Language</label>
-                          <input type="text" class="form-control" name="language">
-                        </div>
-                        <button class="btn btn-success" type="submit" >Next</button>
-                      </div>
-
-
-
-<!-- Home Details-->
-
-                      <div class="card p-4">
-                        <div class="card-header col-md">Home Details</div>
-                        <div class="card-body">
                           <div class="form-row">
-                            <div class="form-group col ">
+                             <div class="form-group col">
+                                <label >First Name </label>
+                                <input type="text" class="form-control" name="first_name" placeholder="First Name" [(ngModel)]="client.first_name">
+                             </div>
+                             <div class="form-group col">
+                                <label >Last Name</label>
+                                <input type="text" class="form-control" name="last_name" placeholder="Last name" [(ngModel)]="client.last_name">
+                             </div>
+                             <div class="form-group col">
+                                 <label >Email</label>
+                                <input type="email" class="form-control" name="email"  placeholder="Email" [(ngModel)]="client.email_address">
+                             </div>
+                          </div>
+
+                          <div class="form-row">
+                             <div class="form-group col-md-5">
+                                 <label >Phone Number(optimal)</label>
+                                 <input type="text" class="form-control" name="phone_number"  placeholder="Phone Number" [(ngModel)]="client.phone_number">
+                             </div>
+                             <div class="form-group col">
+                                   <label >Language (Optional)</label>
+                                 <div>
+                                   <div class="form-check form-check-inline">
+                                     <input class="form-check-input" type="radio" id="spanish" name="language" value="Spanish">
+                                     <label for="spanish" class="form-check-label">Spanish</label>
+                                   </div>
+                                   <div class="form check form-check-inline">
+                                     <input class="form-check-input" type="radio" id="english" name="language" value="English">
+                                     <label for="english" class="form-check-label">English</label>
+                                   </div>
+                                 </div>
+                             </div>
+                            <div>
+                            <button class="btn btn-success" type="submit">Next</button>
+                            </div>
+                          </div>
+                         </div>
+                         </div>
+  <!--Home Details section ------------------------------>
+                         <div class="card">
+                        <div class="card-header">Home Details</div>
+                        <div class="card-body">
+
+                          <div class="form-row">
+                            <div class="form-group col">
                               <label >Home Adresse</label>
                               <input type="text" class="form-control" name="home_adress" >
                             </div>
 
                             <div class="form-group col ">
                               <label >Apt or unit </label>
-                              <input type="text" class="form-control" name="language">
+                              <input type="text" class="form-control" name="apt">
                             </div>
 
-                            <div class="form-group col ">
-                              <label >Adresse</label>
-                              <input type="text" class="form-control" name="language">
-                            </div>
+                            <div class="form-group col">
+                              <label >ZipCode</label>
+                              <input type="text" class="form-control" name="zipcode">
                             </div>
                           </div>
-                        <button>Next</button>
+                          <div class="mr-10"><button class="btn btn-success" type="submit">Next</button></div>
                         </div>
-
-<!-- Buying Profil -->
-
-
-                      <div class="card p-4">
-                        <div class="card-header col-md"> Buying Profil</div>
+                        </div>
+<!-- Buying Profil section ---------------------------- -->
+                         <div class="card">
+                        <div class="card-header"> Buying Profil</div>
                         <div class="card-body">
-                          <div class="form-row">
-                            <div class="form-group ">
-                              <label >Property Type</label>
-                              <input type="text" class="form-control" name="propertytype" [(ngModel)]="client.propertyType">
-                            </div>
 
-                            <div class="form-group">
+                          <div class="form-row">
+                             <div class="form-group col">
+                               <label >Property Type</label>
+                               <input type="text" class="form-control" name="propertytype" [(ngModel)]="client.propertyType">
+                             </div>
+                             <div class="form-group col">
                               <label >Floor </label>
                               <input type="text" class="form-control" name="floor" [(ngModel)]="client.floor">
-                            </div>
-
-                            <div class="form-group ">
-                              <label >finishing</label>
+                             </div>
+                             <div class="form-group col ">
+                              <label >Finishing</label>
                               <input type="text" class="form-control" name="finishing" [(ngModel)]="client.finishing">
-                            </div>
-
-
-                            <div class="form-group col ">
+                             </div>
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col">
                               <label >bedrooms</label>
                               <input type="text" class="form-control" name="bedrooms" [(ngModel)]="client.bedrooms">
                             </div>
-
-                            <div class="form-group ">
+                            <div class="form-group col">
                               <label >bedroomsMore</label>
                               <input type="text" class="form-control" name="bedroomsMore" [(ngModel)]="client.bedroomsMore">
                             </div>
-
-                            <div class="form-group ">
+                            <div class="form-group col">
                               <label >bathrooms</label>
                               <input type="text" class="form-control" name="bathrooms" [(ngModel)]="client.bathrooms">
                             </div>
-
-                            <div class="form-group ">
-                              <label >size</label>
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col">
+                              <label >Size</label>
                               <input type="text" class="form-control" name="size" [(ngModel)]="client.size">
                             </div>
-
-                            <div class="form-group ">
-                              <label >balconyTerrace</label>
+                            <div class="form-group col">
+                              <label >BalconyTerrace</label>
                               <input type="number" class="form-control" name="balconyTerrace" [(ngModel)]="client.balconyTerrace">
                             </div>
-
-                            <div class="form-group ">
-                              <label >balconySize</label>
+                            <div class="form-group col ">
+                              <label >BalconySize</label>
                               <input type="text" class="form-control" name="balconySize" [(ngModel)]="client.balconySize">
                             </div>
+                          </div>
 
-                            <div class="form-group ">
-                              <label >guests</label>
-                              <input type="number" class="form-control" name=" guests" [(ngModel)]="client. guests">
+                          <div class="form-row">
+                            <div class="form-group col ">
+                              <label >Guests</label>
+                              <input type="number" class="form-control" name="guests" [(ngModel)]="client.guests">
                             </div>
-
-                            <div class="form-group ">
-                              <label >beds</label>
-                              <input type="number" class="form-control" name="beds" [(ngModel)]="client.  beds">
+                            <div class="form-group col ">
+                              <label >Beds</label>
+                              <input type="number" class="form-control" name="beds" [(ngModel)]="client.beds">
                             </div>
-
-                            <div class="form-group ">
-                              <label >plotArea</label>
+                            <div class="form-group col">
+                              <label >PlotArea</label>
                               <input type="number" class="form-control" name="plotArea" [(ngModel)]="client.plotArea">
                             </div>
                           </div>
+                          <div><button class="btn btn-success " type="submit"> Next</button></div>
                         </div>
-                        <button> Next</button>
                       </div>
-
-
-
-
+ <!--Byung profil Types---------------------->
+                         <div class="card">
+                           <div class="card-header">Buying Profil</div>
+                           <div class="card-body">
+                              <div class="custom-control custom-switch">
+                                 <input type="checkbox" class="custom-control-input" id="as_buyer">
+                                 <label class="custom-control-label" for="as_buyer">Add as a Buyer ?</label>
+                              </div>
+                           </div>
+                         </div>
                     </form>
-                    <button class="btn btn-success" type="submit" >Save</button>
-                  </div>
+              </div>
+              </div>
+              <div class="card-footer">
+                    <button class="btn btn-success " type="submit" >Save</button>
+              </div>
 
-                  <!-- User Type-->
 
-                  <div class="card p-4">
-                    <div class="card-header col-md">User Type</div>
-                    <div class="card-body">
-                      <div class="form-row">
-                        <div class="form-group col ">
-                          <label >Home Adresse</label>
-                          <input type="text" class="form-control" name="home_adress" >
-                        </div>
 
-                        <div class="form-group col ">
-                          <label >Apt or unit </label>
-                          <input type="text" class="form-control" name="language">
-                        </div>
-
-                        <div class="form-group col ">
-                          <label >Adresse</label>
-                          <input type="text" class="form-control" name="language">
-                        </div>
-                      </div>
-                    </div>
-                    <button>Next</button>
-                  </div>
 
 
 
