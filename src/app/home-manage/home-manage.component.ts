@@ -8,6 +8,8 @@ import {FormsModule} from '@angular/forms';
 })
 export class HomeManageComponent implements OnInit {
  public client :Client;
+ test=0;
+
   constructor() {
     this.client = new Client();
   }
@@ -17,6 +19,10 @@ export class HomeManageComponent implements OnInit {
 
   saveclient(value: any) {
 
+  }
+
+  showOptimalForm() {
+    return this.test=1;
   }
 }
 

@@ -128,7 +128,7 @@
                                  </div>
                              </div>
                             <div>
-                            <button class="btn btn-success" type="submit">Next</button>
+                            <button class="btn btn-success" type="submit" (click)="showOptimalForm()">Next</button>
                             </div>
                           </div>
                          </div>
@@ -136,7 +136,7 @@
   <!--Home Details section ------------------------------>
                          <div class="card">
                         <div class="card-header">Home Details</div>
-                        <div class="card-body">
+                        <div class="card-body " [hidden]="test==0">
 
                           <div class="form-row">
                             <div class="form-group col">
@@ -154,13 +154,13 @@
                               <input type="text" class="form-control" name="zipcode">
                             </div>
                           </div>
-                          <div class="mr-10"><button class="btn btn-success" type="submit">Next</button></div>
+                          <div class="mr-10"><button class="btn btn-success" type="submit" (click)="showOptimalForm()">Next</button></div>
                         </div>
                         </div>
 <!-- Buying Profil section ---------------------------- -->
                          <div class="card">
                         <div class="card-header"> Buying Profil</div>
-                        <div class="card-body">
+                        <div class="card-body" [hidden]="test==0">
 
                           <div class="form-row">
                              <div class="form-group col">
@@ -225,9 +225,9 @@
  <!--Byung profil Types---------------------->
                          <div class="card">
                            <div class="card-header">Buying Profil</div>
-                           <div class="card-body">
+                           <div class="card-body" [hidden]="test==0">
                               <div class="custom-control custom-switch">
-                                 <input type="checkbox" class="custom-control-input" id="as_buyer">
+                                 <input type="checkbox" class="custom-control-input" id="as_buyer" name="as_buyer" [(ngModel)]="client.user_type">
                                  <label class="custom-control-label" for="as_buyer">Add as a Buyer ?</label>
                               </div>
                            </div>
